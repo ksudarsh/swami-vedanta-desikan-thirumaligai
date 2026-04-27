@@ -1,0 +1,7 @@
+*.mp4
+*.mov
+*.avi
+render-output/
+draft-renders/
+.DS_Store
+Thumbs.db
