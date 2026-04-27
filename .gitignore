@@ -3,5 +3,6 @@
 *.avi
 render-output/
 draft-renders/
+docx-qa/
 .DS_Store
 Thumbs.db

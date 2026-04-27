@@ -9,7 +9,7 @@ This repository contains the working material for a donor-facing custom HTML pag
 
 ## Current Working Files
 - `Requirements.md` - living project brief
-- `page.html` - starter HTML fragment to be evolved in later iterations
+- `page.html` - first working donor-page draft to be refined in later iterations
 - `principal-information-template.md` - editable questionnaire text
 - `principal-information-template.docx` - Word version to send to principals / trustees
 - source images and project letter scans in this folder

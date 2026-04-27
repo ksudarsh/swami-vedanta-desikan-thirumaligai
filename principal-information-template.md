@@ -1,8 +1,26 @@
 # Principal / Trustee Information Template
 
-Use this template to collect facts, approvals, style requests, and fundraising details for the **Swami Vedanta Desikan Thirumaligai, Srirangam** webpage.
+Use this template to collect facts, approvals, style requests, and fundraising details for the Swami Vedanta Desikan Thirumaligai, Srirangam webpage.
 
 Short phrases are fine. Kannada or Tamil notes are also fine. Final website English can be rewritten later without changing the intended meaning.
+
+## Working Public Draft Already Prepared
+- A first donor-page draft has been prepared separately for review.
+- The public page currently draws on these already-used source references:
+  - Official Parakala Matham page:
+    https://www.parakalamatham.org/about-the-mutt/sri-parakala-mutt-branches-and-affiliate-temples/newer-tamilnadu-mutts/
+  - Supporting blog reference:
+    https://aravamudham.blogspot.com/2010/07/swami-desikans-thirumaligai-at-sri.html
+- Please use this form to confirm, correct, strengthen, or remove any wording before the page is treated as final.
+
+## Items To Resolve Internally Before Final Public Release
+- Should the page publicly say Swami Desikan lived here for about 42 years:
+- Should the page publicly say he attained Paramapadam from here:
+- Should the page mention preserved features such as the stone structure, wooden girders, family pestle, and kUrmAsanam:
+- Should the page publicly use 300+ years old:
+- Should the public cost figure be Rs. 25 lakhs or Rs. 27 lakhs:
+- Should PLM USA support be shown publicly as Rs. 10 lakhs:
+- Are bank details / UPI / QR details approved for immediate publication:
 
 ## 1. Official Identity
 - Official English name to use on the page:
@@ -33,7 +51,7 @@ Short phrases are fine. Kannada or Tamil notes are also fine. Final website Engl
 
 ## 5. Renovation And Repair Need
 - What is the present condition of the structure:
-- Is the `300+ year old` wording approved for public use:
+- Is the 300+ year old wording approved for public use:
 - What exact problems should be mentioned:
 - Water seepage:
 - Wall / plaster damage:

@@ -32,15 +32,16 @@ Only after that should it move into contribution and funding needs, but the page
 ### Images
 - `Grant Request - Srirangam Sannidhi.jpg`
 - `Grant Request - Srirangam Sannidhi - Acharyan Approved.jpg`
-- `WhatsApp Image 2026-04-23 at 6.55.15 AM.jpeg`
-- `WhatsApp Image 2026-04-23 at 6.55.15 AM (1).jpeg`
-- `WhatsApp Image 2026-04-23 at 6.55.16 AM.jpeg`
-- `WhatsApp Image 2026-04-23 at 6.55.16 AM (1).jpeg`
+- `bhoomi-pooja-priest.jpg`
+- `bhoomi-pooja-foundation-ritual.jpg`
+- `bhoomi-pooja-overview.jpg`
 
 ### Existing Written Inputs
 - A grant request letter dated `08.02.2026`
-- The official ParakalaMatham page on newer Tamil Nadu mutts
-- A supporting blog post on Swami Desikan's Thirumaligai at Srirangam
+- The official ParakalaMatham page on newer Tamil Nadu mutts:
+  `https://www.parakalamatham.org/about-the-mutt/sri-parakala-mutt-branches-and-affiliate-temples/newer-tamilnadu-mutts/`
+- A supporting blog post on Swami Desikan's Thirumaligai at Srirangam:
+  `https://aravamudham.blogspot.com/2010/07/swami-desikans-thirumaligai-at-sri.html`
 
 ## Verified Facts That May Be Used
 The following facts are sufficiently supported by currently available source material and may be used in the draft page:
@@ -116,7 +117,8 @@ The first working draft should likely include these blocks:
 
 ## Asset Handling
 - Existing local images must not be deleted or clobbered
-- Later, selected images may be renamed to upload-safe filenames for the web page
+- Selected worksite images have been renamed to upload-safe filenames for the web page draft
+- The duplicate overview image has been removed from the working asset set
 - No videos are currently part of this project
 
 ## Contribution Details Strategy

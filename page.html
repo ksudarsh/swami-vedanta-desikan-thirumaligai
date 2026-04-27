@@ -1,104 +1,123 @@
 <style>
-  .parakala-page {
-    --surface: #fff9f0;
-    --surface-soft: #fff5e6;
-    --ink: #35261d;
-    --muted: #725d4d;
-    --line: rgba(97, 54, 24, 0.14);
-    --maroon: #7a1f46;
-    --rose: #b53778;
-    --gold: #e1b85e;
-    --saffron: #c5761f;
-    --shadow: 0 18px 40px rgba(63, 35, 18, 0.12);
-    --radius-lg: 28px;
+  .desikan-page {
+    --bg: #fff9f1;
+    --bg-soft: #fff2df;
+    --card: rgba(255, 250, 242, 0.98);
+    --ink: #32231a;
+    --muted: #6b5848;
+    --line: rgba(114, 70, 34, 0.16);
+    --maroon: #7d1f3b;
+    --maroon-deep: #5a1129;
+    --saffron: #c67720;
+    --gold: #e4c57a;
+    --leaf: #5f6d3f;
+    --shadow: 0 20px 48px rgba(68, 36, 16, 0.12);
+    --radius-xl: 32px;
+    --radius-lg: 24px;
     --radius-md: 18px;
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
-    padding: 8px 0 64px;
+    padding: 10px 0 72px;
     color: var(--ink);
     font-family: "Trebuchet MS", "Gill Sans", "Segoe UI", sans-serif;
-    line-height: 1.65;
+    line-height: 1.7;
   }
 
-  .parakala-page,
-  .parakala-page *,
-  .parakala-page *::before,
-  .parakala-page *::after {
+  .desikan-page,
+  .desikan-page *,
+  .desikan-page *::before,
+  .desikan-page *::after {
     box-sizing: border-box;
   }
 
-  .parakala-page img {
+  .desikan-page img {
     display: block;
+    width: 100%;
     max-width: 100%;
     height: auto;
     border: 0;
   }
 
-  .parakala-page p,
-  .parakala-page h1,
-  .parakala-page h2,
-  .parakala-page figure,
-  .parakala-page ul {
+  .desikan-page p,
+  .desikan-page h1,
+  .desikan-page h2,
+  .desikan-page h3,
+  .desikan-page ul,
+  .desikan-page ol,
+  .desikan-page figure,
+  .desikan-page blockquote {
     margin: 0;
   }
 
-  .parakala-page a {
+  .desikan-page a {
     color: inherit;
+    text-decoration: none;
   }
 
-  .parakala-shell {
-    border-radius: 34px;
+  .desikan-shell {
+    border-radius: 38px;
     overflow: hidden;
-    background: linear-gradient(135deg, rgba(122, 31, 70, 0.97), rgba(181, 55, 120, 0.94) 54%, rgba(197, 118, 31, 0.88));
+    background:
+      radial-gradient(circle at top right, rgba(255, 216, 146, 0.24), transparent 34%),
+      linear-gradient(135deg, rgba(90, 17, 41, 0.98), rgba(125, 31, 59, 0.95) 48%, rgba(198, 119, 32, 0.9));
     color: #fff8ef;
     box-shadow: var(--shadow);
-    border: 1px solid rgba(255, 221, 180, 0.18);
+    border: 1px solid rgba(255, 221, 180, 0.16);
   }
 
-  .parakala-grid {
+  .desikan-hero {
     display: grid;
-    grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
-    gap: 26px;
-    padding: 34px;
+    grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.88fr);
+    gap: 28px;
+    padding: 38px;
     align-items: center;
   }
 
-  .parakala-eyebrow {
+  .desikan-eyebrow {
     display: inline-flex;
+    align-items: center;
+    gap: 8px;
     margin-bottom: 16px;
     padding: 8px 14px;
     border-radius: 999px;
     background: rgba(255, 245, 223, 0.12);
-    border: 1px solid rgba(255, 230, 184, 0.22);
-    font-size: 0.84rem;
+    border: 1px solid rgba(255, 233, 192, 0.22);
+    font-size: 0.82rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
   }
 
-  .parakala-title {
-    margin: 0 0 12px;
+  .desikan-title {
+    margin: 0 0 14px;
     font-family: Georgia, "Palatino Linotype", "Book Antiqua", serif;
-    font-size: clamp(2rem, 4vw, 3.8rem);
-    line-height: 1.08;
+    font-size: clamp(2.25rem, 4.1vw, 4rem);
+    line-height: 1.04;
   }
 
-  .parakala-subtitle {
-    margin: 0 0 20px;
-    color: rgba(255, 245, 229, 0.92);
-    font-size: 1.03rem;
+  .desikan-subtitle {
+    max-width: 62ch;
+    margin-bottom: 22px;
+    color: rgba(255, 245, 231, 0.94);
+    font-size: 1.05rem;
   }
 
-  .parakala-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+  .desikan-meta,
+  .desikan-links,
+  .desikan-list,
+  .desikan-status-list {
     padding: 0;
-    margin: 0;
     list-style: none;
   }
 
-  .parakala-meta li {
+  .desikan-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 22px;
+  }
+
+  .desikan-meta li {
     padding: 9px 14px;
     border-radius: 999px;
     background: rgba(255, 247, 231, 0.12);
@@ -106,104 +125,504 @@
     font-size: 0.93rem;
   }
 
-  .parakala-image {
-    overflow: hidden;
-    border-radius: 26px;
-    border: 1px solid rgba(255, 228, 190, 0.24);
-    background: rgba(255, 247, 231, 0.06);
-    box-shadow: 0 24px 38px rgba(36, 9, 0, 0.2);
+  .desikan-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
   }
 
-  .parakala-section {
+  .desikan-button,
+  .desikan-button-alt {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 12px 18px;
+    border-radius: 999px;
+    font-weight: 700;
+    transition: transform 0.18s ease, background 0.18s ease;
+  }
+
+  .desikan-button {
+    background: linear-gradient(135deg, #f6d894, #f2bf5f);
+    color: #4f2100;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.14);
+  }
+
+  .desikan-button-alt {
+    background: rgba(255, 247, 231, 0.1);
+    color: #fff8ef;
+    border: 1px solid rgba(255, 230, 184, 0.22);
+  }
+
+  .desikan-button:hover,
+  .desikan-button-alt:hover {
+    transform: translateY(-1px);
+  }
+
+  .desikan-hero-media {
+    display: grid;
+    gap: 14px;
+  }
+
+  .desikan-hero-image,
+  .desikan-photo-card {
+    overflow: hidden;
+    border-radius: 28px;
+    border: 1px solid rgba(255, 233, 192, 0.22);
+    background: rgba(255, 248, 236, 0.08);
+    box-shadow: 0 24px 42px rgba(36, 9, 0, 0.2);
+  }
+
+  .desikan-hero-caption {
+    padding: 14px 16px 0;
+    color: rgba(255, 243, 223, 0.84);
+    font-size: 0.91rem;
+  }
+
+  .desikan-section {
     position: relative;
     margin-top: 28px;
-    padding: 28px;
-    border-radius: var(--radius-lg);
+    padding: 30px;
+    border-radius: var(--radius-xl);
     overflow: hidden;
-    background: linear-gradient(180deg, rgba(255, 250, 240, 0.98), rgba(255, 247, 233, 0.98));
+    background: linear-gradient(180deg, rgba(255, 250, 242, 0.99), rgba(255, 245, 232, 0.98));
     border: 1px solid var(--line);
     box-shadow: var(--shadow);
   }
 
-  .parakala-section::before {
+  .desikan-section::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    inset: 0 0 auto;
     height: 5px;
-    background: linear-gradient(90deg, rgba(122, 31, 70, 0.95), rgba(225, 184, 94, 0.92), rgba(197, 118, 31, 0.92));
+    background: linear-gradient(90deg, rgba(125, 31, 59, 0.96), rgba(228, 197, 122, 0.94), rgba(198, 119, 32, 0.92));
   }
 
-  .parakala-kicker {
-    margin: 0 0 8px;
-    color: #99491a;
-    font-size: 0.82rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
+  .desikan-kicker {
+    margin-bottom: 10px;
+    color: #995323;
+    font-size: 0.8rem;
     font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
   }
 
-  .parakala-h2 {
-    margin: 0 0 16px;
+  .desikan-h2 {
+    margin: 0 0 18px;
     font-family: Georgia, "Palatino Linotype", "Book Antiqua", serif;
-    font-size: clamp(1.55rem, 2vw, 2.2rem);
+    font-size: clamp(1.65rem, 2.1vw, 2.35rem);
     line-height: 1.12;
   }
 
-  .parakala-text p + p {
+  .desikan-text p + p,
+  .desikan-callout p + p {
     margin-top: 14px;
   }
 
-  @media (max-width: 980px) {
-    .parakala-grid {
+  .desikan-grid-two,
+  .desikan-grid-three,
+  .desikan-gallery,
+  .desikan-status-grid {
+    display: grid;
+    gap: 18px;
+  }
+
+  .desikan-grid-two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+
+  .desikan-grid-three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .desikan-card,
+  .desikan-callout,
+  .desikan-status,
+  .desikan-editorial {
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--line);
+  }
+
+  .desikan-card,
+  .desikan-status {
+    padding: 20px;
+    background: var(--card);
+  }
+
+  .desikan-card h3,
+  .desikan-status h3 {
+    margin-bottom: 10px;
+    font-family: Georgia, "Palatino Linotype", "Book Antiqua", serif;
+    font-size: 1.18rem;
+    line-height: 1.2;
+  }
+
+  .desikan-card p,
+  .desikan-status p,
+  .desikan-text,
+  .desikan-list li,
+  .desikan-status-list li {
+    color: var(--muted);
+  }
+
+  .desikan-list,
+  .desikan-status-list {
+    display: grid;
+    gap: 10px;
+    margin-top: 14px;
+  }
+
+  .desikan-list li,
+  .desikan-status-list li {
+    position: relative;
+    padding-left: 18px;
+  }
+
+  .desikan-list li::before,
+  .desikan-status-list li::before {
+    content: "";
+    position: absolute;
+    top: 0.7em;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--maroon), var(--saffron));
+  }
+
+  .desikan-callout {
+    padding: 22px;
+    background: linear-gradient(180deg, rgba(255, 244, 220, 0.84), rgba(255, 236, 205, 0.68));
+  }
+
+  .desikan-callout strong {
+    color: var(--maroon-deep);
+  }
+
+  .desikan-quote {
+    padding: 22px 24px;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(135deg, rgba(125, 31, 59, 0.96), rgba(161, 73, 44, 0.95));
+    color: #fff7ee;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  }
+
+  .desikan-quote p {
+    font-size: 1.02rem;
+  }
+
+  .desikan-quote span {
+    display: block;
+    margin-top: 12px;
+    color: rgba(255, 238, 217, 0.82);
+    font-size: 0.9rem;
+  }
+
+  .desikan-gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 20px;
+  }
+
+  .desikan-photo-card figcaption {
+    padding: 14px 15px 16px;
+    background: #fff8ee;
+  }
+
+  .desikan-photo-card strong {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--ink);
+    font-size: 0.98rem;
+  }
+
+  .desikan-photo-card span {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+
+  .desikan-donor-box {
+    padding: 24px;
+    border-radius: 28px;
+    background: linear-gradient(135deg, rgba(255, 244, 222, 0.98), rgba(255, 235, 204, 0.92));
+    border: 1px solid rgba(157, 95, 33, 0.18);
+  }
+
+  .desikan-donor-box h3 {
+    margin-bottom: 12px;
+    font-family: Georgia, "Palatino Linotype", "Book Antiqua", serif;
+    font-size: 1.28rem;
+  }
+
+  .desikan-donor-box p + p {
+    margin-top: 12px;
+  }
+
+  .desikan-status-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 22px;
+  }
+
+  .desikan-status h3 {
+    color: var(--maroon-deep);
+  }
+
+  .desikan-editorial {
+    padding: 22px;
+    background: linear-gradient(180deg, rgba(95, 109, 63, 0.1), rgba(95, 109, 63, 0.03));
+  }
+
+  .desikan-editorial h3 {
+    margin-bottom: 10px;
+    font-family: Georgia, "Palatino Linotype", "Book Antiqua", serif;
+    font-size: 1.12rem;
+  }
+
+  .desikan-editorial p + p {
+    margin-top: 12px;
+  }
+
+  .desikan-note {
+    margin-top: 16px;
+    padding: 12px 14px;
+    border-radius: 16px;
+    background: rgba(125, 31, 59, 0.08);
+    color: var(--ink);
+    font-size: 0.94rem;
+  }
+
+  @media (max-width: 1080px) {
+    .desikan-hero,
+    .desikan-grid-two,
+    .desikan-grid-three,
+    .desikan-gallery,
+    .desikan-status-grid {
       grid-template-columns: 1fr;
     }
   }
 
-  @media (max-width: 680px) {
-    .parakala-page {
+  @media (max-width: 720px) {
+    .desikan-page {
       padding-top: 6px;
     }
 
-    .parakala-grid,
-    .parakala-section {
-      padding: 20px;
+    .desikan-hero,
+    .desikan-section {
+      padding: 22px;
     }
 
-    .parakala-title {
-      font-size: 2rem;
+    .desikan-links {
+      flex-direction: column;
+    }
+
+    .desikan-button,
+    .desikan-button-alt {
+      width: 100%;
     }
   }
 </style>
 
-<main class="parakala-page">
-  <section class="parakala-shell">
-    <div class="parakala-grid">
+<main class="desikan-page">
+  <section class="desikan-shell">
+    <div class="desikan-hero">
       <div>
-        <div class="parakala-eyebrow">Project Eyebrow</div>
-        <h1 class="parakala-title">Project Title</h1>
-        <p class="parakala-subtitle">
-          Replace this with the project introduction. Keep it suitable for `parakalamatham.org` and for a WordPress page using the `Unboxed Content` template.
+        <div class="desikan-eyebrow">Srirangam Preservation Appeal</div>
+        <h1 class="desikan-title">Swami Vedantha Desikan Thirumaligai</h1>
+        <p class="desikan-subtitle">
+          At Srirangam stands a sacred Thirumaligai revered in the sampradaya as a blessed vaasasthanam associated with Swami Vedanta Desikan. This is not only a place of memory, but a living religious space linked to Parakala Matham, where worship, observances, and traditional learning continue even as the structure now calls for urgent preservation.
         </p>
-        <ul class="parakala-meta">
-          <li>Location / Context</li>
-          <li>Audience / Purpose</li>
-          <li>Optional Badge</li>
+        <ul class="desikan-meta">
+          <li>Srirangam</li>
+          <li>Parakala Matham Tradition</li>
+          <li>Restoration Need Is Immediate</li>
         </ul>
+        <div class="desikan-links">
+          <a class="desikan-button" href="#desikan-support">Support The Restoration</a>
+          <a class="desikan-button-alt" href="#desikan-need">See The Current Need</a>
+        </div>
       </div>
-      <div class="parakala-image">
-        <img src="https://via.placeholder.com/1200x900?text=Project+Image" alt="Project image placeholder">
+      <div class="desikan-hero-media">
+        <figure class="desikan-hero-image">
+          <img src="https://www.parakalamatham.org/wp-content/uploads/bhoomi-pooja-overview.jpg" alt="Bhoomi pooja and preparatory restoration work at Swami Vedantha Desikan Thirumaligai in Srirangam">
+        </figure>
+        <p class="desikan-hero-caption">
+          Current project photos show preparatory restoration activity already underway at the Thirumaligai premises.
+        </p>
       </div>
     </div>
   </section>
 
-  <section class="parakala-section">
-    <p class="parakala-kicker">Section Label</p>
-    <h2 class="parakala-h2">Section Heading</h2>
-    <div class="parakala-text">
-      <p>Use this starter section to build the rest of the page. Duplicate or reshape sections as needed.</p>
-      <p>Keep all CSS scoped, avoid full-document tags, and treat this as an embeddable content block rather than a full webpage.</p>
+  <section class="desikan-section">
+    <p class="desikan-kicker">Why This Matters</p>
+    <h2 class="desikan-h2">A sacred site that deserves both reverence and protection</h2>
+    <div class="desikan-grid-two">
+      <div class="desikan-text">
+        <p>
+          The official Parakala Matham material identifies this place as Deshikan Tirumaligai, Srirangam, also known as the Sirangam Mutt. In the current project material, it is appropriately presented in public-facing form as <strong>Swami Vedantha Desikan Thirumaligai</strong>.
+        </p>
+        <p>
+          The official page further describes the premises as a blessed vaasasthanam associated with Swami Vedanta Desikan. A long-circulated Sri Vaishnava blog account records the site as the Thirumaligai where Swami Desikan lived for approximately 42 years in Srirangam and from where he left for Paramapadam, preserving for devotees an exceptional continuity of place and memory.
+        </p>
+        <p>
+          That same account notes that the stone structure, wooden girders, a wooden household pestle, and the kUrmAsanam associated with Swami Desikan's nitya-karmas were preserved there. For devotees of Sri Vedanta Desikan's sampradaya, the importance of the site therefore lies not merely in age or architecture, but in the continuing sanctity of association.
+        </p>
+      </div>
+      <div class="desikan-callout">
+        <p>
+          <strong>This appeal is not for a dormant monument.</strong> It is for a living sacred premises where sampradaya continuity still breathes through worship, observance, and teaching.
+        </p>
+        <p>
+          The first responsibility of this page is therefore to establish why the Thirumaligai matters spiritually and historically, and only then to show why donor support is now necessary.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="desikan-section">
+    <p class="desikan-kicker">Living Continuity</p>
+    <h2 class="desikan-h2">Religious life continues here even while the structure weakens</h2>
+    <div class="desikan-grid-three">
+      <article class="desikan-card">
+        <h3>Daily worship</h3>
+        <p>
+          The currently verified project material states that daily Thiruvaradanam and related kainkaryams are conducted here, affirming that the premises remains an active religious space.
+        </p>
+      </article>
+      <article class="desikan-card">
+        <h3>Acharya and utsava observances</h3>
+        <p>
+          Azhwar-Acharya Thirunakshatrams, thatheeyaradhanam during utsavam periods, and dwaadasi-related observances are identified as part of the site's ongoing devotional life.
+        </p>
+      </article>
+      <article class="desikan-card">
+        <h3>Learning and transmission</h3>
+        <p>
+          Veda-Prabandha pathams and kalakshepams are also associated with the premises, underscoring that this Thirumaligai supports the living transmission of tradition, not only remembrance.
+        </p>
+      </article>
+    </div>
+    <div class="desikan-quote" style="margin-top: 22px;">
+      <p>
+        Preserving the Thirumaligai means preserving a place where worship, remembrance, and sampradaya learning continue to remain present together.
+      </p>
+      <span>Working draft language based on currently verified project material</span>
+    </div>
+  </section>
+
+  <section class="desikan-section">
+    <p class="desikan-kicker">Parakala Matham Connection</p>
+    <h2 class="desikan-h2">The page should speak clearly to Parakala Matham sishyas and abhimanis</h2>
+    <div class="desikan-grid-two">
+      <div class="desikan-text">
+        <p>
+          The project brief is explicit that this page is for <strong>parakalamatham.org</strong> and must speak especially to sishyas, abhimanis, and well-wishers of Parakala Matham. The current verified material already supports that connection: the official Parakala Matham page names the site, describes its ongoing activities, and notes the need for restoration and renovation.
+        </p>
+        <p>
+          The same source material also notes that the premises needs practical improvements to support the stay of the Acharyan and parivaram during visits to Srirangam. That makes the restoration need both devotional and functional.
+        </p>
+      </div>
+      <ul class="desikan-list">
+        <li>The site is publicly connected with Parakala Matham in existing Matham material.</li>
+        <li>The appeal is therefore not external to the tradition, but part of preserving one of its associated sacred spaces.</li>
+        <li>The donor language on this page is intentionally framed as kainkarya and preservation, not merely construction fundraising.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="desikan-section" id="desikan-need">
+    <p class="desikan-kicker">Current Need</p>
+    <h2 class="desikan-h2">The building now requires urgent restoration and repair</h2>
+    <div class="desikan-grid-two">
+      <div class="desikan-text">
+        <p>
+          The grant request letter in the project folder describes the Thirumaligai as an aging structure in depleted condition, with water seepage in multiple places and deterioration affecting plastered walls, the floor, and the terrace. The letter further states that immediate attention is needed if the Thirumaligai is to remain intact for coming years.
+        </p>
+        <p>
+          This aligns with the official Parakala Matham page, which describes the building as ancient and in immediate need of restoration and renovation, and notes that convenience features are also needed to support the stay of the Acharyan and parivaram during visits to Srirangam.
+        </p>
+      </div>
+      <div class="desikan-callout">
+        <p>
+          <strong>Presently visible issues in project material:</strong> water seepage, aged plaster surfaces, floor deterioration, terrace wear, and the need for supportive work that will help preserve the premises and better accommodate future use during Acharyan visits.
+        </p>
+        <p>
+          The current photos also indicate that preparatory work has already begun, which means this is an active preservation effort rather than a distant proposal.
+        </p>
+      </div>
+    </div>
+
+    <div class="desikan-gallery">
+      <figure class="desikan-photo-card">
+        <img src="https://www.parakalamatham.org/wp-content/uploads/bhoomi-pooja-foundation-ritual.jpg" alt="Bhoomi pooja bricks and offerings placed at the restoration site">
+        <figcaption>
+          <strong>Bhoomi pooja and commencement context</strong>
+          <span>Indicative project-stage image showing ritual commencement and preparatory work at the site.</span>
+        </figcaption>
+      </figure>
+      <figure class="desikan-photo-card">
+        <img src="https://www.parakalamatham.org/wp-content/uploads/bhoomi-pooja-priest.jpg" alt="Priest standing beside the restoration area during bhoomi pooja">
+        <figcaption>
+          <strong>Ritual and repair in the same space</strong>
+          <span>The photographs help communicate that restoration work is being approached in a traditional and respectful manner.</span>
+        </figcaption>
+      </figure>
+      <figure class="desikan-photo-card">
+        <img src="https://www.parakalamatham.org/wp-content/uploads/bhoomi-pooja-overview.jpg" alt="Overview of the excavation and offerings at the worksite">
+        <figcaption>
+          <strong>Work has already moved beyond discussion</strong>
+          <span>This image is useful in the donor narrative because it shows that the project is presently live.</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="desikan-section" id="desikan-support">
+    <p class="desikan-kicker">Support The Work</p>
+    <h2 class="desikan-h2">A donor should be able to understand the need and respond without friction</h2>
+    <div class="desikan-grid-two">
+      <div class="desikan-donor-box">
+        <h3>Support and contact</h3>
+        <p>
+          The current project material places the restoration requirement at <strong>around Rs. 25 lakhs</strong>. The appeal already has momentum, and support from devotees, sishyas, abhimanis, and well-wishers can help ensure that the Thirumaligai is preserved with the care it deserves.
+        </p>
+        <p>
+          The official Parakala Matham page requests technical and financial support from the devotee community and lists the following public contact points for those wishing to help this effort.
+        </p>
+        <ul class="desikan-list">
+          <li>Manager: Sri Govidarajan, Srirangam</li>
+          <li>Sri R. Achutharaman, Bangalore: +91 96860 24598</li>
+          <li>Sri N. Ananthanarayana, Chennai: +91 94440 30895</li>
+        </ul>
+      </div>
+      <div class="desikan-text">
+        <p>
+          The fundraising tone of this page is intentional. The structure should be preserved not only because it is old, but because it remains meaningful to devotees, to the Parakala Matham tradition, and to future generations who should continue to encounter this place as a cared-for sacred space.
+        </p>
+        <p>
+          Donor support on this page should ultimately be presented as a direct opportunity to take part in preservation kainkaryam: helping stabilize the premises, restore its usability, and sustain its role in worship and traditional learning.
+        </p>
+        <ul class="desikan-list">
+          <li>Preserve a sacred place associated with Swami Vedanta Desikan</li>
+          <li>Support an active site of worship, observance, and traditional learning</li>
+          <li>Help restore the premises for continued use by the Acharyan and parivaram during visits to Srirangam</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="desikan-status-grid">
+      <article class="desikan-status">
+        <h3>Project estimate</h3>
+        <p>Current working figure in the project material: around Rs. 25 lakhs.</p>
+      </article>
+      <article class="desikan-status">
+        <h3>Known support</h3>
+        <p>Current project notes record meaningful support already being mobilized toward the work.</p>
+      </article>
+      <article class="desikan-status">
+        <h3>Community response</h3>
+        <p>This page is designed to support a direct preservation appeal to the devotee community.</p>
+      </article>
     </div>
   </section>
 </main>
