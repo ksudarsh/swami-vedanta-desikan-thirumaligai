@@ -46,8 +46,6 @@ body:has(.desikan-page) .entry-header {
   .desikan-page h1,
   .desikan-page h2,
   .desikan-page h3,
-  .desikan-page ul,
-  .desikan-page ol,
   .desikan-page figure,
   .desikan-page blockquote {
     margin: 0;
@@ -105,19 +103,6 @@ body:has(.desikan-page) .entry-header {
     font-size: 1.05rem;
   }
 
-  .desikan-meta,
-  .desikan-links,
-  .desikan-list,
-  .desikan-status-list {
-    padding: 0;
-    list-style: none !important;
-  }
-
-  .desikan-list,
-  .desikan-status-list {
-    margin-left: 0;
-  }
-
   .desikan-links {
     display: flex;
     flex-wrap: wrap;
@@ -134,7 +119,7 @@ body:has(.desikan-page) .entry-header {
     padding: 12px 18px;
     border-radius: 999px;
     font-weight: 700;
-    transition: transform 0.18s ease, background 0.18s ease;
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease, background 0.2s ease;
   }
 
   .desikan-button {
@@ -149,9 +134,14 @@ body:has(.desikan-page) .entry-header {
     border: 1px solid rgba(255, 230, 184, 0.22);
   }
 
-  .desikan-button:hover,
+  .desikan-button:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
+  }
+
   .desikan-button-alt:hover {
-    transform: translateY(-1px);
+    transform: translateY(-2px);
+    background: rgba(255, 247, 231, 0.2);
   }
 
   .desikan-hero-media {
@@ -159,13 +149,38 @@ body:has(.desikan-page) .entry-header {
     gap: 14px;
   }
 
-  .desikan-hero-image,
-  .desikan-photo-card {
+  .desikan-hero-image {
     overflow: hidden;
     border-radius: 28px;
     border: 1px solid rgba(255, 233, 192, 0.22);
     background: rgba(255, 248, 236, 0.08);
     box-shadow: 0 24px 42px rgba(36, 9, 0, 0.2);
+  }
+
+  .desikan-photo-card {
+    overflow: hidden;
+    border-radius: 28px;
+    border: 1px solid var(--line);
+    background: var(--card);
+    box-shadow: 0 12px 24px rgba(68, 36, 16, 0.08);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .desikan-photo-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 48px rgba(68, 36, 16, 0.15);
+  }
+
+  .desikan-photo-card img {
+    flex-grow: 1;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .desikan-photo-card:hover img {
+    transform: scale(1.04);
   }
 
   .desikan-hero-caption {
@@ -215,8 +230,6 @@ body:has(.desikan-page) .entry-header {
   }
 
   .desikan-grid-two,
-  .desikan-grid-three,
-  .desikan-gallery,
   .desikan-status-grid,
   .desikan-support-grid {
     display: grid;
@@ -258,17 +271,22 @@ body:has(.desikan-page) .entry-header {
     color: var(--muted);
   }
 
+  /* --- BULLETED LIST FIXES --- */
   .desikan-list,
   .desikan-status-list {
     display: grid;
     gap: 10px;
-    margin-top: 14px;
+    margin-top: 14px !important;
+    padding-left: 0 !important; /* Strips WP Theme indent */
+    margin-left: 0 !important;  /* Strips WP Theme indent */
+    list-style: none !important;
   }
 
   .desikan-list li,
   .desikan-status-list li {
     position: relative;
-    padding-left: 22px;
+    padding-left: 15px !important; /* Total space for bullet (7px) + gap (8px) */
+    margin-left: 0 !important;
     list-style: none !important;
   }
 
@@ -281,13 +299,27 @@ body:has(.desikan-page) .entry-header {
   .desikan-status-list li::before {
     content: "";
     position: absolute;
-    top: 0.78em;
-    left: 0;
-    width: 10px;
-    height: 10px;
+    top: 0.65em;
+    left: 0; /* Aligns bullet exactly flush-left with the paragraphs above */
+    width: 7px;
+    height: 7px;
     border-radius: 999px;
     background: linear-gradient(135deg, var(--maroon), var(--saffron));
   }
+
+  .desikan-list li.desikan-donor-placeholder {
+    color: var(--saffron) !important;
+    font-style: italic;
+    opacity: 0.85;
+    font-weight: 600;
+  }
+  
+  .desikan-list li.desikan-donor-placeholder::before {
+    background: transparent;
+    border: 1px dashed var(--saffron);
+    box-sizing: border-box;
+  }
+  /* -------------------------- */
 
   .desikan-callout {
     padding: 22px;
@@ -310,7 +342,9 @@ body:has(.desikan-page) .entry-header {
   }
 
   .desikan-gallery {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     margin-top: 20px;
   }
 
@@ -321,7 +355,10 @@ body:has(.desikan-page) .entry-header {
 
   .desikan-photo-card figcaption {
     padding: 14px 15px 16px;
-    background: #fff8ee;
+    background: linear-gradient(to bottom, #fff8ee, #fff);
+    border-top: 1px solid var(--line);
+    position: relative;
+    z-index: 2;
   }
 
   .desikan-photo-card strong {
@@ -337,34 +374,105 @@ body:has(.desikan-page) .entry-header {
   }
 
   .desikan-donor-box {
+    position: relative;
     padding: 24px;
     border-radius: 28px;
     background: linear-gradient(135deg, rgba(255, 244, 222, 0.98), rgba(255, 235, 204, 0.92));
     border: 1px solid rgba(157, 95, 33, 0.18);
+    box-shadow: inset 0 0 0 1px #fff, 0 12px 30px rgba(68, 36, 16, 0.08);
+    overflow: hidden;
+  }
+
+  .desikan-donor-box::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--maroon), var(--gold), var(--saffron));
   }
 
   .desikan-donor-box h3 {
     margin-bottom: 12px;
     font-family: Georgia, "Palatino Linotype", "Book Antiqua", serif;
     font-size: 1.28rem;
+    color: var(--maroon-deep);
   }
 
   .desikan-donor-box p + p {
     margin-top: 12px;
   }
 
+  .desikan-pdf-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 4px;
+    padding: 2px 10px;
+    border-radius: 8px;
+    background: rgba(125, 31, 59, 0.08);
+    color: var(--maroon-deep);
+    font-size: 0.85rem;
+    font-weight: 700;
+    border: 1px solid rgba(125, 31, 59, 0.15);
+    transition: all 0.2s ease;
+    vertical-align: text-bottom;
+  }
+
+  .desikan-pdf-link:hover {
+    background: var(--maroon-deep);
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(90, 17, 41, 0.2);
+  }
+
+  .desikan-pdf-link svg {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+    transition: transform 0.2s ease;
+  }
+
+  .desikan-pdf-link:hover svg {
+    transform: scale(1.1);
+  }
+
+  /* --- QR CARD FIXES --- */
   .desikan-qr-card {
+    position: relative;
     padding: 24px;
     border-radius: 28px;
-    background: linear-gradient(180deg, rgba(255, 250, 242, 1), rgba(255, 242, 223, 0.98));
+    background: linear-gradient(135deg, rgba(255, 244, 222, 0.98), rgba(255, 235, 204, 0.92)); /* Now exactly matches the donor box */
     border: 1px solid rgba(157, 95, 33, 0.18);
-    text-align: center;
+    box-shadow: inset 0 0 0 1px #fff, 0 12px 30px rgba(68, 36, 16, 0.08);
+    text-align: left; /* Restores left justification for paragraphs */
+    overflow: hidden;
+  }
+
+  .desikan-qr-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--saffron), var(--gold), var(--maroon)); /* Added matching top line */
   }
 
   .desikan-qr-card h3 {
-    margin-bottom: 10px;
+    margin-bottom: 12px; /* Matched to donor box */
     font-family: Georgia, "Palatino Linotype", "Book Antiqua", serif;
-    font-size: 1.2rem;
+    font-size: 1.28rem; /* Matched to donor box */
+    color: var(--maroon-deep);
+    text-align: center; /* ONLY the heading is centered */
+  }
+
+  .desikan-qr-card p {
+    color: var(--muted);
+  }
+  /* --------------------- */
+
+  @keyframes desikan-glow {
+    0% { box-shadow: inset 0 0 0 1px rgba(17, 17, 17, 0.08), 0 16px 36px rgba(68, 36, 16, 0.12), 0 0 0 rgba(198, 119, 32, 0); }
+    50% { box-shadow: inset 0 0 0 1px rgba(17, 17, 17, 0.08), 0 16px 36px rgba(68, 36, 16, 0.2), 0 0 25px rgba(198, 119, 32, 0.35); }
+    100% { box-shadow: inset 0 0 0 1px rgba(17, 17, 17, 0.08), 0 16px 36px rgba(68, 36, 16, 0.12), 0 0 0 rgba(198, 119, 32, 0); }
   }
 
   .desikan-qr-placeholder {
@@ -372,7 +480,7 @@ body:has(.desikan-page) .entry-header {
     place-items: center;
     width: min(100%, 240px);
     aspect-ratio: 1;
-    margin: 18px auto 16px;
+    margin: 18px auto 16px; /* auto L/R margin centers the QR block regardless of text alignment */
     border-radius: 24px;
     background:
       linear-gradient(45deg, #111 12.5%, transparent 12.5%, transparent 37.5%, #111 37.5%, #111 62.5%, transparent 62.5%, transparent 87.5%, #111 87.5%),
@@ -380,7 +488,12 @@ body:has(.desikan-page) .entry-header {
     background-size: 30px 30px;
     background-position: 0 0, 15px 15px;
     border: 12px solid #fff;
-    box-shadow: inset 0 0 0 1px rgba(17, 17, 17, 0.08), 0 16px 36px rgba(68, 36, 16, 0.12);
+    animation: desikan-glow 3.5s infinite alternate ease-in-out;
+    transition: transform 0.3s ease;
+  }
+
+  .desikan-qr-placeholder:hover {
+    transform: scale(1.03);
   }
 
   .desikan-qr-placeholder span {
@@ -391,7 +504,7 @@ body:has(.desikan-page) .entry-header {
     min-height: 92px;
     padding: 10px;
     border-radius: 18px;
-    background: rgba(255, 248, 236, 0.96);
+    background: rgba(255, 248, 236, 0.98);
     color: var(--maroon-deep);
     font-size: 0.84rem;
     font-weight: 700;
@@ -399,14 +512,19 @@ body:has(.desikan-page) .entry-header {
     text-transform: uppercase;
     text-align: center;
     line-height: 1.35;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
 
   @media (max-width: 1080px) {
     .desikan-hero,
     .desikan-grid-two,
-    .desikan-gallery,
-    .desikan-status-grid {
+    .desikan-status-grid,
+    .desikan-support-grid {
       grid-template-columns: 1fr;
+    }
+    
+    .desikan-support-grid {
+      gap: 24px;
     }
   }
 
@@ -427,6 +545,11 @@ body:has(.desikan-page) .entry-header {
     .desikan-button,
     .desikan-button-alt {
       width: 100%;
+    }
+    
+    .desikan-pdf-link {
+      margin-top: 4px;
+      margin-left: 0;
     }
   }
 </style>
@@ -568,11 +691,17 @@ body:has(.desikan-page) .entry-header {
   <section class="desikan-section" id="desikan-support">
     <p class="desikan-kicker">Appeal For Funding</p>
     <h2 class="desikan-h2">Help complete the renovation and preserve this historic sacred site</h2>
+    
     <div class="desikan-support-grid">
       <div class="desikan-donor-box">
         <h3>Current state of funding</h3>
         <p>
-          The project is presently estimated at <strong>Rs. 27 lakhs</strong>. The shishyas in the USA through <strong>PLM USA</strong> have already donated <strong>Rs. 10 lakhs</strong>, and we are looking for generous donations from other shishyas and abhimanis for quick completion and ongoing preservation of this historic site.
+          The project is presently estimated at <strong>Rs. 27 lakhs</strong> 
+          <a href="https://www.parakalamatham.org/wp-content/uploads/Srirangam-Sannidhi-Estimate.pdf" target="_blank" rel="noopener noreferrer" class="desikan-pdf-link">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+            View Estimate PDF
+          </a>. 
+          The shishyas in the USA through <strong>PLM USA</strong> have already donated <strong>Rs. 10 lakhs</strong>, and we are looking for generous donations from other shishyas and abhimanis for quick completion and ongoing preservation of this historic site.
         </p>
         <p class="desikan-highlight">
           Your contributions, however small or big, will go to a very important preservation cause of our priceless sampradayam.
@@ -580,7 +709,7 @@ body:has(.desikan-page) .entry-header {
         <h3 style="margin-top: 18px;">List of donors</h3>
         <ul class="desikan-list" style="margin-top: 10px;">
           <li>PLM USA: Rs. 10 lakhs</li>
-          <li>Your name here</li>
+          <li class="desikan-donor-placeholder">[ Your Name Here ]</li>
         </ul>
         <h3 style="margin-top: 22px;">Contacts</h3>
         <ul class="desikan-list" style="margin-top: 10px;">
