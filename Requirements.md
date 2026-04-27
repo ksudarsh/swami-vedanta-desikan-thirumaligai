@@ -1,8 +1,8 @@
-# Swami Vedanta Desikan Thirumaligai, Srirangam
+# Srimad Vedanta Desikan Thirumaligai, Srirangam
 
 ## Project Goal
 
-Create a donor-facing custom HTML fragment for `www.parakalamatham.org` that highlights the historic and sampradaya importance of **Swami Vedantha Desikan Thirumaligai** at Srirangam, explains its connection to Parakala Matham, and supports ongoing and future fundraising for renovation, restoration, and related upkeep.
+Create a donor-facing custom HTML fragment for `www.parakalamatham.org` that highlights the historic and sampradaya importance of **Srimad Vedanta Desikan Thirumaligai** at Srirangam, explains its connection to Parakala Matham, and supports ongoing and future fundraising for renovation, restoration, and related upkeep.
 
 This is **not** a full standalone website. It must be built as an embeddable WordPress HTML fragment for the page template **`Unboxed Content`**.
 
@@ -58,7 +58,7 @@ Only after that should it move into contribution and funding needs, but the page
 The following facts are sufficiently supported by currently available source material and may be used in the draft page:
 
 - The site is known on the official ParakalaMatham website as **Deshikan Tirumaligai, Srirangam** / **Sirangam Mutt**.
-- The site is popularly known as **Swami Vedantha Desikan Thirumaligai**.
+- The site is popularly known as **Srimad Vedanta Desikan Thirumaligai**.
 - The official page says the premises is regarded as a blessed **vaasasthanam** associated with Swami Vedanta Desikan.
 - The official page says daily **Thiruvaradanam**, **Azhwar-Acharya Thirunakshatrams**, **thatheeyaradhanam** during utsavam and dwaadasi days, and **Veda-Prabandha pathams / kalakshepams** are conducted there.
 - The official page states that the building is ancient and in immediate need of **restoration and renovation**.
@@ -70,7 +70,7 @@ The following facts are sufficiently supported by currently available source mat
 
 Use the full public heading:
 
-- **Swami Vedantha Desikan Thirumaligai**
+- **Srimad Vedanta Desikan Thirumaligai**
 
 ## Historically Useful But Still To Be Handled Carefully
 
@@ -88,7 +88,7 @@ The page should be structured around this narrative:
 
 1. **Sanctity and legacy**
    
-   - explain why Swami Vedantha Desikan Thirumaligai matters
+   - explain why Srimad Vedanta Desikan Thirumaligai matters
    - establish sampradaya significance
    - connect it to Parakala Matham
 

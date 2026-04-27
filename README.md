@@ -1,4 +1,4 @@
-# Swami Vedanta Desikan Thirumaligai, Srirangam
+# Srimad Vedanta Desikan Thirumaligai, Srirangam
 
 This repository contains the working material for a donor-facing custom HTML page for `parakalamatham.org`.
 

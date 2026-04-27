@@ -1,82 +1,95 @@
-# Principal / Trustee Information Template
+# Principal / Trustee Confirmation Template
 
-Use this template to collect facts, approvals, style requests, and fundraising details for the Swami Vedanta Desikan Thirumaligai, Srirangam webpage.
+Use this document to confirm the facts, wording, approvals, and media guidance for the Srimad Vedanta Desikan Thirumaligai, Srirangam page.
 
-Short phrases are fine. Kannada or Tamil notes are also fine. Final website English can be rewritten later without changing the intended meaning.
+Short answers are fine. Tamil or Kannada notes are also fine. The final website English can be refined later, but the underlying facts and approvals must be clear.
 
-## Working Public Draft Already Prepared
-- A first donor-page draft has been prepared separately for review.
-- The public page currently draws on these already-used source references:
-  - Official Parakala Matham page:
-    https://www.parakalamatham.org/about-the-mutt/sri-parakala-mutt-branches-and-affiliate-temples/newer-tamilnadu-mutts/
-  - Supporting blog reference:
-    https://aravamudham.blogspot.com/2010/07/swami-desikans-thirumaligai-at-sri.html
-- Please use this form to confirm, correct, strengthen, or remove any wording before the page is treated as final.
+## Purpose Of This Document
+- Confirm the correct public identity of the place
+- Confirm the historical and religious significance of the Thirumaligai
+- Confirm the role and continuing involvement of Parakala Matham
+- Confirm what may and may not be said publicly
+- Confirm the funding facts, donation details, and donor wording
+- Specify what additional high-quality photographs must be provided
 
-## Items To Resolve Internally Before Final Public Release
-- Should the page publicly say Swami Desikan lived here for about 42 years:
-- Should the page publicly say he attained Paramapadam from here:
-- Should the page mention preserved features such as the stone structure, wooden girders, family pestle, and kUrmAsanam:
-- Should the page publicly use 300+ years old:
-- Should the public cost figure be Rs. 25 lakhs or Rs. 27 lakhs:
-- Should PLM USA support be shown publicly as Rs. 10 lakhs:
-- Are bank details / UPI / QR details approved for immediate publication:
+## Source References Already Used In Drafting
+- Official Parakala Matham page:
+  https://www.parakalamatham.org/about-the-mutt/sri-parakala-mutt-branches-and-affiliate-temples/newer-tamilnadu-mutts/
+- Supporting blog reference:
+  https://aravamudham.blogspot.com/2010/07/swami-desikans-thirumaligai-at-sri.html
 
-## 1. Official Identity
-- Official English name to use on the page:
-- Official Tamil / Sanskrit / other name to use on the page:
-- Alternate names by which devotees know this place:
-- Full location / address:
+## Priority Items Requiring Clear Confirmation
+- Correct official public name to use throughout:
+- Is `Srimad Vedanta Desikan Thirumaligai` approved as the standard English public name:
+- Is the place correctly described as a blessed vaasasthanam associated with Srimad Vedanta Desikan:
+- Is it approved to say Srimad Vedanta Desikan stayed here for about 42 years:
+- Is it approved to say he attained Paramapadam from here:
+- Is the current public cost figure Rs. 27 lakhs:
+- Is it approved to say PLM USA has contributed Rs. 10 lakhs:
+- Are donation account / UPI / QR details approved for public display:
 
-## 2. Historical Importance
-- How should the site be described in one paragraph:
-- Is it correct to say this is Swami Vedanta Desikan's Thirumaligai:
-- Is it correct to say this was a blessed vaasasthanam of Swami Desikan:
-- Is it correct to say Swami Desikan stayed here for about 42 years:
-- Is it correct to say he attained Paramapadam from here:
-- If yes, what is the preferred authoritative wording for the Paramapadam statement:
-- Any wording that should NOT be used publicly:
+## 1. Official Identity Of The Place
+- Official English name:
+- Official Tamil / Sanskrit name:
+- Other names by which devotees know this place:
+- Full address / street details:
+- Any exact wording that must appear under the main heading:
 
-## 3. Importance To Parakala Matham
-- How is this site connected to Parakala Matham:
-- How should this connection be described on the website:
+## 2. Srimad Vedanta Desikan: Religious Importance To Be Stated Correctly
+- In one short paragraph, how should the website describe the importance of Srimad Vedanta Desikan in relation to this Thirumaligai:
+- Which exact points are approved for public use:
+- Blessed vaasasthanam:
+- Long stay / residence:
+- Paramapadam association:
+- Preserved traditional objects / structural associations:
+- Any traditional wording, quote, or sampradaya expression preferred here:
+- Any wording that must not be used:
+
+## 3. History Of The Thirumaligai
+- In one short paragraph, how should the history of this place be described publicly:
+- Is the 300+ year old wording approved:
+- Are there any specific dates / periods / events that should be mentioned:
+- Are there any historical claims that should not be used unless separately verified:
+
+## 4. Confirmed Involvement Of Parakala Matham
+- How should the page describe the connection to Parakala Matham:
+- What ongoing role does Parakala Matham play here today:
+- Are Acharyan visits to be mentioned publicly:
+- If yes, what is the preferred wording:
+- Are daily Thiruvaradanam and kainkaryams confirmed:
+- Are Azhwar-Acharya Thirunakshatrams, thatheeyaradhanam, dwaadasi observances, pathams, and kalakshepams all confirmed for public mention:
 - Any specific Acharya / parampara wording preferred:
 
-## 4. Current Religious Activity
-- What regular worship is conducted here:
-- Are Thiruvaradanam and daily kainkaryams performed:
-- What utsavams / Thirunakshatrams are observed here:
-- Are Veda / Prabandha pathams or kalakshepams conducted:
-- Any other important spiritual activity to mention:
-
-## 5. Renovation And Repair Need
-- What is the present condition of the structure:
-- Is the 300+ year old wording approved for public use:
-- What exact problems should be mentioned:
+## 5. Present Condition And Renovation Need
+- What is the present condition of the building in brief:
+- Which exact problems should the page mention:
 - Water seepage:
-- Wall / plaster damage:
+- Wall / plaster deterioration:
 - Floor damage:
-- Terrace / roof damage:
-- Any structural risk that must be highlighted:
+- Terrace / roof deterioration:
+- Any structural risk or vulnerability that must be highlighted:
+- Is it correct to say the renovation has already begun:
+- Is it correct to say Acharyan permission has been granted:
 
-## 6. Current Project Scope
-- What renovation / restoration work is planned:
+## 6. Renovation Scope And Current Project Status
+- What work is planned:
 - What work has already started:
-- What do the excavation / foundation-related photos show:
-- Is this restoration, renovation, strengthening, or new supporting construction:
-- Any work that should not be shown or mentioned publicly:
+- What do the bhoomi pooja pictures show:
+- What do the approval / grant request letters establish:
+- Are there milestones or stages that should be listed publicly:
+- Should the page say that more structural issues may be discovered as work progresses:
+- Any part of the work that should not be shown publicly:
 
-## 7. Estimated Cost And Fundraising
-- Is the current estimate still about Rs. 25 lakhs:
-- Or should the public page use Rs. 27 lakhs instead:
-- How much has already been arranged:
-- How much still needs to be raised:
-- Should this amount be shown publicly:
-- Preferred wording for the donor appeal:
-- Is it approved to say PLM USA is contributing Rs. 10 lakhs:
-- Preferred wording for listing major and minor contributors:
+## 7. Funding Facts And Public Appeal
+- Approved public project estimate:
+- Amount already arranged:
+- Amount still to be raised:
+- Is PLM USA to be shown as donor no. 1:
+- Preferred wording for inviting donations from other shishyas and abhimanis:
+- Preferred wording for saying even small contributions are valuable:
+- Should the page invite ongoing preservation support in addition to current renovation support:
 
-## 8. Contribution Details
+## 8. Donation Details To Be Published
 - Account name:
 - Bank name:
 - Branch:
@@ -84,28 +97,38 @@ Short phrases are fine. Kannada or Tamil notes are also fine. Final website Engl
 - IFSC:
 - UPI ID:
 - QR code available:
-- Contact person for donations:
+- Donation contact person:
 - Phone:
 - Email:
-- Which contribution details can be shown publicly:
-- Should the page encourage immediate / direct contributions on the same page:
+- Which of the above may be shown publicly:
 
-## 9. People To Mention Publicly
-- Principal / local manager / trustee names to mention:
-- Designations:
-- Any Acharya approval wording to include:
-- Names that should not be mentioned publicly:
+## 9. Photos Required From The Principals
+- We need many more high-quality photographs for the website. Please provide the following clearly:
+- Front exterior of the building:
+- Entrance / facade details:
+- Interior sanctified spaces:
+- Places associated with worship / kainkaryam:
+- Acharyan visit photographs:
+- Daily worship / utsavam / observance photographs:
+- Renovation progress photographs:
+- Any historically important structural features:
+- Any photos that must not be used:
+- Captions or explanations for each photo:
 
-## 10. Page Content Changes Requested
-- Please remove this item:
+## 10. Public Do's And Don'ts
+- Do mention these facts publicly:
+- Do not mention these facts publicly:
+- Do use this preferred spelling / naming:
+- Do not use these spellings / titles / descriptions:
+- Do show these people or institutions publicly:
+- Do not show these people, names, numbers, or images publicly:
+- Do use these donation instructions:
+- Do not publish these payment details:
+
+## 11. Final Review Notes
+- Please remove this current website item:
 - Please add this item:
 - Please change this wording:
 - Please change the tone:
-- Please change the order / structure:
-- Please add any quote / slokam / traditional wording:
-
-## 11. Media Guidance
-- Which photos must be used:
-- Which photos should not be used:
-- Captions or explanations for the current photos:
-- Any additional photos available:
+- Please change the order of sections:
+- Any final instruction before the page goes public:
