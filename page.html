@@ -110,28 +110,19 @@ body:has(.desikan-page) .entry-header {
   .desikan-list,
   .desikan-status-list {
     padding: 0;
-    list-style: none;
+    list-style: none !important;
   }
 
-  .desikan-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 22px;
-  }
-
-  .desikan-meta li {
-    padding: 9px 14px;
-    border-radius: 999px;
-    background: rgba(255, 247, 231, 0.12);
-    border: 1px solid rgba(255, 230, 184, 0.22);
-    font-size: 0.93rem;
+  .desikan-list,
+  .desikan-status-list {
+    margin-left: 0;
   }
 
   .desikan-links {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
+    margin-top: 8px;
   }
 
   .desikan-button,
@@ -226,7 +217,8 @@ body:has(.desikan-page) .entry-header {
   .desikan-grid-two,
   .desikan-grid-three,
   .desikan-gallery,
-  .desikan-status-grid {
+  .desikan-status-grid,
+  .desikan-support-grid {
     display: grid;
     gap: 18px;
   }
@@ -234,10 +226,6 @@ body:has(.desikan-page) .entry-header {
   .desikan-grid-two {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: start;
-  }
-
-  .desikan-grid-three {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .desikan-card,
@@ -280,17 +268,23 @@ body:has(.desikan-page) .entry-header {
   .desikan-list li,
   .desikan-status-list li {
     position: relative;
-    padding-left: 18px;
+    padding-left: 22px;
+    list-style: none !important;
+  }
+
+  .desikan-list li::marker,
+  .desikan-status-list li::marker {
+    content: "";
   }
 
   .desikan-list li::before,
   .desikan-status-list li::before {
     content: "";
     position: absolute;
-    top: 0.7em;
+    top: 0.78em;
     left: 0;
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
     border-radius: 999px;
     background: linear-gradient(135deg, var(--maroon), var(--saffron));
   }
@@ -304,28 +298,25 @@ body:has(.desikan-page) .entry-header {
     color: var(--maroon-deep);
   }
 
-  .desikan-quote {
-    padding: 22px 24px;
-    border-radius: var(--radius-lg);
-    background: linear-gradient(135deg, rgba(125, 31, 59, 0.96), rgba(161, 73, 44, 0.95));
-    color: #fff7ee;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  }
-
-  .desikan-quote p {
-    font-size: 1.02rem;
-  }
-
-  .desikan-quote span {
-    display: block;
-    margin-top: 12px;
-    color: rgba(255, 238, 217, 0.82);
-    font-size: 0.9rem;
+  .desikan-highlight {
+    margin-top: 16px;
+    padding: 16px 18px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(125, 31, 59, 0.1), rgba(198, 119, 32, 0.14));
+    border: 1px solid rgba(157, 95, 33, 0.16);
+    color: var(--maroon-deep);
+    font-weight: 700;
+    line-height: 1.55;
   }
 
   .desikan-gallery {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     margin-top: 20px;
+  }
+
+  .desikan-support-grid {
+    grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+    align-items: start;
   }
 
   .desikan-photo-card figcaption {
@@ -362,43 +353,57 @@ body:has(.desikan-page) .entry-header {
     margin-top: 12px;
   }
 
-  .desikan-status-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    margin-top: 22px;
+  .desikan-qr-card {
+    padding: 24px;
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(255, 250, 242, 1), rgba(255, 242, 223, 0.98));
+    border: 1px solid rgba(157, 95, 33, 0.18);
+    text-align: center;
   }
 
-  .desikan-status h3 {
-    color: var(--maroon-deep);
-  }
-
-  .desikan-editorial {
-    padding: 22px;
-    background: linear-gradient(180deg, rgba(95, 109, 63, 0.1), rgba(95, 109, 63, 0.03));
-  }
-
-  .desikan-editorial h3 {
+  .desikan-qr-card h3 {
     margin-bottom: 10px;
     font-family: Georgia, "Palatino Linotype", "Book Antiqua", serif;
-    font-size: 1.12rem;
+    font-size: 1.2rem;
   }
 
-  .desikan-editorial p + p {
-    margin-top: 12px;
+  .desikan-qr-placeholder {
+    display: grid;
+    place-items: center;
+    width: min(100%, 240px);
+    aspect-ratio: 1;
+    margin: 18px auto 16px;
+    border-radius: 24px;
+    background:
+      linear-gradient(45deg, #111 12.5%, transparent 12.5%, transparent 37.5%, #111 37.5%, #111 62.5%, transparent 62.5%, transparent 87.5%, #111 87.5%),
+      linear-gradient(45deg, #111 12.5%, #fff 12.5%, #fff 37.5%, #111 37.5%, #111 62.5%, #fff 62.5%, #fff 87.5%, #111 87.5%);
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
+    border: 12px solid #fff;
+    box-shadow: inset 0 0 0 1px rgba(17, 17, 17, 0.08), 0 16px 36px rgba(68, 36, 16, 0.12);
   }
 
-  .desikan-note {
-    margin-top: 16px;
-    padding: 12px 14px;
-    border-radius: 16px;
-    background: rgba(125, 31, 59, 0.08);
-    color: var(--ink);
-    font-size: 0.94rem;
+  .desikan-qr-placeholder span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 92px;
+    min-height: 92px;
+    padding: 10px;
+    border-radius: 18px;
+    background: rgba(255, 248, 236, 0.96);
+    color: var(--maroon-deep);
+    font-size: 0.84rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.35;
   }
 
   @media (max-width: 1080px) {
     .desikan-hero,
     .desikan-grid-two,
-    .desikan-grid-three,
     .desikan-gallery,
     .desikan-status-grid {
       grid-template-columns: 1fr;
@@ -435,22 +440,18 @@ body:has(.desikan-page) .entry-header {
         <p class="desikan-subtitle">
           At Srirangam stands a sacred Thirumaligai revered in the sampradaya as a blessed vaasasthanam associated with Swami Vedanta Desikan. This is not only a place of memory, but a living religious space linked to Parakala Matham, where worship, observances, and traditional learning continue even as the structure now calls for urgent preservation.
         </p>
-        <ul class="desikan-meta">
-          <li>Srirangam</li>
-          <li>Parakala Matham Tradition</li>
-          <li>Restoration Need Is Immediate</li>
-        </ul>
         <div class="desikan-links">
-          <a class="desikan-button" href="#desikan-support">Support The Restoration</a>
-          <a class="desikan-button-alt" href="#desikan-need">See The Current Need</a>
+          <a class="desikan-button" href="#desikan-involvement">Parakala Matham Involvement</a>
+          <a class="desikan-button-alt" href="#desikan-renovation">State Of Renovation Project</a>
+          <a class="desikan-button-alt" href="#desikan-support">Current State Of Funding</a>
         </div>
       </div>
       <div class="desikan-hero-media">
         <figure class="desikan-hero-image">
-          <img src="https://www.parakalamatham.org/wp-content/uploads/bhoomi-pooja-overview.jpg" alt="Bhoomi pooja and preparatory restoration work at Swami Vedantha Desikan Thirumaligai in Srirangam">
+          <img src="https://www.parakalamatham.org/wp-content/uploads/swami-desikan-thirumaligai-front.jpg" alt="Front view of Swami Vedantha Desikan Thirumaligai at Srirangam">
         </figure>
         <p class="desikan-hero-caption">
-          Current project photos show preparatory restoration activity already underway at the Thirumaligai premises.
+          Front view of Swami Vedantha Desikan Thirumaligai, the sacred Srirangam premises associated with Swami Vedanta Desikan.
         </p>
       </div>
     </div>
@@ -465,10 +466,10 @@ body:has(.desikan-page) .entry-header {
           The official Parakala Matham material identifies this place as Deshikan Tirumaligai, Srirangam, also known as the Sirangam Mutt. In the current project material, it is appropriately presented in public-facing form as <strong>Swami Vedantha Desikan Thirumaligai</strong>.
         </p>
         <p>
-          The official page further describes the premises as a blessed vaasasthanam associated with Swami Vedanta Desikan. A long-circulated Sri Vaishnava blog account records the site as the Thirumaligai where Swami Desikan lived for approximately 42 years in Srirangam and from where he left for Paramapadam, preserving for devotees an exceptional continuity of place and memory.
+          This Thirumaligai is revered as a blessed vaasasthanam associated with Swami Vedanta Desikan. It is remembered in the sampradaya as the Thirumaligai where Swami Desikan lived for many years in Srirangam and from where he left for Paramapadam, preserving for devotees an exceptional continuity of place and memory.
         </p>
         <p>
-          That same account notes that the stone structure, wooden girders, a wooden household pestle, and the kUrmAsanam associated with Swami Desikan's nitya-karmas were preserved there. For devotees of Sri Vedanta Desikan's sampradaya, the importance of the site therefore lies not merely in age or architecture, but in the continuing sanctity of association.
+          The traditional memory of the site also includes preserved structural and ritual associations connected with Swami Desikan's life here. Its importance therefore lies not merely in age or architecture, but in the continuing sanctity of association.
         </p>
       </div>
       <div class="desikan-callout">
@@ -482,150 +483,141 @@ body:has(.desikan-page) .entry-header {
     </div>
   </section>
 
-  <section class="desikan-section">
-    <p class="desikan-kicker">Living Continuity</p>
-    <h2 class="desikan-h2">Religious life continues here even while the structure weakens</h2>
-    <div class="desikan-grid-three">
-      <article class="desikan-card">
-        <h3>Daily worship</h3>
-        <p>
-          Daily Thiruvaradanam and related kainkaryams are conducted here, and the premises remains an active religious space.
-        </p>
-      </article>
-      <article class="desikan-card">
-        <h3>Acharya and utsava observances</h3>
-        <p>
-          Azhwar-Acharya Thirunakshatrams, thatheeyaradhanam during utsavam periods, and dwaadasi-related observances are identified as part of the site's ongoing devotional life.
-        </p>
-      </article>
-      <article class="desikan-card">
-        <h3>Learning and transmission</h3>
-        <p>
-          Veda-Prabandha pathams and kalakshepams are also associated with the premises, underscoring that this Thirumaligai supports the living transmission of tradition, not only remembrance.
-        </p>
-      </article>
-    </div>
-    <div class="desikan-quote" style="margin-top: 22px;">
-      <p>
-        Preserving the Thirumaligai means preserving a place where worship, remembrance, and sampradaya learning continue to remain present together.
-      </p>
-      <span>Working draft language based on currently verified project material</span>
-    </div>
-  </section>
-
-  <section class="desikan-section">
-    <p class="desikan-kicker">Parakala Matham Connection</p>
-    <h2 class="desikan-h2">The page is for Parakala Matham sishyas and abhimanis</h2>
+  <section class="desikan-section" id="desikan-involvement">
+    <p class="desikan-kicker">Parakala Matham Involvement</p>
+    <h2 class="desikan-h2">Parakala Matham involvement is devotional, practical, and ongoing</h2>
     <div class="desikan-grid-two">
       <div class="desikan-text">
         <p>
-          The project brief is explicit that this page is for <strong>parakalamatham.org</strong> and must speak especially to sishyas, abhimanis, and well-wishers of Parakala Matham. The current verified material already supports that connection: the official Parakala Matham page names the site, describes its ongoing activities, and notes the need for restoration and renovation.
+          This sacred premises continues to be sustained through the involvement of Parakala Matham. Daily Thiruvaradanam and related kainkaryams are conducted here, Azhwar-Acharya Thirunakshatrams and thatheeyaradhanam are observed, and Veda-Prabandha pathams and kalakshepams continue the living transmission of sampradaya.
         </p>
         <p>
-          The same source material also notes that the premises needs practical improvements to support the stay of the Acharyan and parivaram during visits to Srirangam. That makes the restoration need both devotional and functional.
+          The Thirumaligai also remains relevant in a practical and continuing way through Acharyan visits to Srirangam. Its preservation is therefore not only about memory, but about ensuring that this sacred place remains fit for present and future religious use.
         </p>
       </div>
       <ul class="desikan-list">
-        <li>The site is publicly connected with Parakala Matham in existing Matham material.</li>
-        <li>The appeal is therefore not external to the tradition, but part of preserving one of its associated sacred spaces.</li>
-        <li>The donor language on this page is intentionally framed as kainkarya and preservation, not merely construction fundraising.</li>
+        <li>Daily worship and kainkaryam continue here.</li>
+        <li>Acharya observances, thatheeyaradhanam, and traditional learning remain active.</li>
+        <li>Preservation of the site is directly connected with Parakala Matham's continuing involvement.</li>
       </ul>
+    </div>
+    <div class="desikan-gallery">
+      <figure class="desikan-photo-card">
+        <img src="https://www.parakalamatham.org/wp-content/uploads/acharyan-visit-srirangam-mutt-2019.jpg" alt="Acharyan visit at Srirangam Mutt">
+        <figcaption>
+          <strong>Acharyan visit and continuing connection</strong>
+          <span>The premises continues to matter as a place visited and used within the Parakala Matham tradition.</span>
+        </figcaption>
+      </figure>
     </div>
   </section>
 
-  <section class="desikan-section" id="desikan-need">
-    <p class="desikan-kicker">Current Need</p>
-    <h2 class="desikan-h2">The building now requires urgent restoration and repair</h2>
+  <section class="desikan-section" id="desikan-renovation">
+    <p class="desikan-kicker">State Of Renovation Project</p>
+    <h2 class="desikan-h2">The building requires urgent repair, and renovation has already begun</h2>
     <div class="desikan-grid-two">
       <div class="desikan-text">
         <p>
-          The grant request letter in the project folder describes the Thirumaligai as an aging structure in depleted condition, with water seepage in multiple places and deterioration affecting plastered walls, the floor, and the terrace. The letter further states that immediate attention is needed if the Thirumaligai is to remain intact for coming years.
+          The building is in urgent need of repair and restoration. Water seepage, aged plaster surfaces, floor deterioration, and terrace wear have all made timely intervention necessary if the Thirumaligai is to remain intact for coming years.
         </p>
         <p>
-          This aligns with the official Parakala Matham page, which describes the building as ancient and in immediate need of restoration and renovation, and notes that convenience features are also needed to support the stay of the Acharyan and parivaram during visits to Srirangam.
+          Acharyan has granted permission for the renovation work to begin, and the project has therefore moved from appeal into active execution. The letters and the bhoomi pooja photographs together show that this is a live preservation effort, not a distant proposal.
         </p>
       </div>
       <div class="desikan-callout">
         <p>
-          <strong>Presently visible issues in project material:</strong> water seepage, aged plaster surfaces, floor deterioration, terrace wear, and the need for supportive work that will help preserve the premises and better accommodate future use during Acharyan visits.
+          <strong>This work is both urgent and practical.</strong> As restoration progresses, further structural issues may be uncovered, and the final scope may expand in order to preserve the building properly and responsibly.
         </p>
         <p>
-          The current photos also indicate that preparatory work has already begun, which means this is an active preservation effort rather than a distant proposal.
+          The need is not only to repair what is immediately visible, but to ensure quick completion and ongoing preservation of this historic site.
         </p>
       </div>
     </div>
-
     <div class="desikan-gallery">
       <figure class="desikan-photo-card">
-        <img src="https://www.parakalamatham.org/wp-content/uploads/bhoomi-pooja-foundation-ritual.jpg" alt="Bhoomi pooja bricks and offerings placed at the restoration site">
+        <img src="https://www.parakalamatham.org/wp-content/uploads/srirangam-renovation-grant-request-letter.jpg" alt="Grant request letter for renovation support">
         <figcaption>
-          <strong>Bhoomi pooja and commencement context</strong>
-          <span>Indicative project-stage image showing ritual commencement and preparatory work at the site.</span>
-        </figcaption>
-      </figure>
-      <figure class="desikan-photo-card">
-        <img src="https://www.parakalamatham.org/wp-content/uploads/bhoomi-pooja-priest.jpg" alt="Priest standing beside the restoration area during bhoomi pooja">
-        <figcaption>
-          <strong>Ritual and repair in the same space</strong>
-          <span>The photographs help communicate that restoration work is being approached in a traditional and respectful manner.</span>
+          <strong>Renovation appeal in motion</strong>
+          <span>The appeal for support has already been formalized as part of the active project effort.</span>
         </figcaption>
       </figure>
       <figure class="desikan-photo-card">
         <img src="https://www.parakalamatham.org/wp-content/uploads/bhoomi-pooja-overview.jpg" alt="Overview of the excavation and offerings at the worksite">
         <figcaption>
-          <strong>Work has already moved beyond discussion</strong>
-          <span>This image is useful in the donor narrative because it shows that the project is presently live.</span>
+          <strong>Work has already begun</strong>
+          <span>The bhoomi pooja stage confirms that renovation activity is underway at the site.</span>
+        </figcaption>
+      </figure>
+      <figure class="desikan-photo-card">
+        <img src="https://www.parakalamatham.org/wp-content/uploads/bhoomi-pooja-foundation-ritual.jpg" alt="Bhoomi pooja bricks and offerings placed at the restoration site">
+        <figcaption>
+          <strong>Bhoomi pooja and commencement</strong>
+          <span>Preparatory restoration work is being undertaken in a traditional and reverential manner.</span>
+        </figcaption>
+      </figure>
+      <figure class="desikan-photo-card">
+        <img src="https://www.parakalamatham.org/wp-content/uploads/bhoomi-pooja-priest.jpg" alt="Priest standing beside the restoration area during bhoomi pooja">
+        <figcaption>
+          <strong>Ritual and repair together</strong>
+          <span>The work reflects both urgency and reverence in preserving the Thirumaligai.</span>
         </figcaption>
       </figure>
     </div>
   </section>
 
   <section class="desikan-section" id="desikan-support">
-    <p class="desikan-kicker">Support The Work</p>
-    <h2 class="desikan-h2">A donor should be able to understand the need and respond without friction</h2>
-    <div class="desikan-grid-two">
+    <p class="desikan-kicker">Appeal For Funding</p>
+    <h2 class="desikan-h2">Help complete the renovation and preserve this historic sacred site</h2>
+    <div class="desikan-support-grid">
       <div class="desikan-donor-box">
-        <h3>Support and contact</h3>
+        <h3>Current state of funding</h3>
         <p>
-          The current project material places the restoration requirement at <strong>around Rs. 25 lakhs</strong>. The appeal already has momentum, and support from devotees, sishyas, abhimanis, and well-wishers can help ensure that the Thirumaligai is preserved with the care it deserves.
+          The project is presently estimated at <strong>Rs. 27 lakhs</strong>. The shishyas in the USA through <strong>PLM USA</strong> have already donated <strong>Rs. 10 lakhs</strong>, and we are looking for generous donations from other shishyas and abhimanis for quick completion and ongoing preservation of this historic site.
         </p>
-        <p>
-          The official Parakala Matham page requests technical and financial support from the devotee community and lists the following public contact points for those wishing to help this effort.
+        <p class="desikan-highlight">
+          Your contributions, however small or big, will go to a very important preservation cause of our priceless sampradayam.
         </p>
-        <ul class="desikan-list">
+        <h3 style="margin-top: 18px;">List of donors</h3>
+        <ul class="desikan-list" style="margin-top: 10px;">
+          <li>PLM USA: Rs. 10 lakhs</li>
+          <li>Your name here</li>
+        </ul>
+        <h3 style="margin-top: 22px;">Contacts</h3>
+        <ul class="desikan-list" style="margin-top: 10px;">
           <li>Manager: Sri Govidarajan, Srirangam</li>
           <li>Sri R. Achutharaman, Bangalore: +91 96860 24598</li>
           <li>Sri N. Ananthanarayana, Chennai: +91 94440 30895</li>
         </ul>
       </div>
-      <div class="desikan-text">
+      <div class="desikan-qr-card">
+        <h3>Dummy QR Placeholder</h3>
         <p>
-          The fundraising tone of this page is intentional. The structure should be preserved not only because it is old, but because it remains meaningful to devotees, to the Parakala Matham tradition, and to future generations who should continue to encounter this place as a cared-for sacred space.
+          Replace this panel with the actual donation QR code and UPI details when the final payment instructions are approved for publication.
         </p>
+        <div class="desikan-qr-placeholder" aria-label="Dummy QR placeholder">
+          <span>Dummy QR</span>
+        </div>
         <p>
-          Donor support on this page should ultimately be presented as a direct opportunity to take part in preservation kainkaryam: helping stabilize the premises, restore its usability, and sustain its role in worship and traditional learning.
+          The layout already reserves space for direct-scan giving so a motivated donor can respond immediately.
         </p>
-        <ul class="desikan-list">
-          <li>Preserve a sacred place associated with Swami Vedanta Desikan</li>
-          <li>Support an active site of worship, observance, and traditional learning</li>
-          <li>Help restore the premises for continued use by the Acharyan and parivaram during visits to Srirangam</li>
-        </ul>
       </div>
     </div>
 
-    <div class="desikan-status-grid">
-      <article class="desikan-status">
-        <h3>Project estimate</h3>
-        <p>Current working figure in the project material: around Rs. 25 lakhs.</p>
-      </article>
-      <article class="desikan-status">
-        <h3>Known support</h3>
-        <p>Current project notes record meaningful support already being mobilized toward the work.</p>
-      </article>
-      <article class="desikan-status">
-        <h3>Community response</h3>
-        <p>This page is designed to support a direct preservation appeal to the devotee community.</p>
-      </article>
+    <div class="desikan-gallery" style="margin-top: 22px;">
+      <figure class="desikan-photo-card">
+        <img src="https://www.parakalamatham.org/wp-content/uploads/acharyan-renovation-approval-letter.jpg" alt="Approved letter indicating Acharyan permission for renovation work">
+        <figcaption>
+          <strong>Approved and in progress</strong>
+          <span>The renovation effort proceeds with formal approval and a clearly established preservation purpose.</span>
+        </figcaption>
+      </figure>
+      <figure class="desikan-photo-card">
+        <img src="https://www.parakalamatham.org/wp-content/uploads/srirangam-renovation-grant-request-letter.jpg" alt="Grant request letter for renovation support">
+        <figcaption>
+          <strong>Documented project appeal</strong>
+          <span>The funding request is part of an active and documented restoration effort for the Thirumaligai.</span>
+        </figcaption>
+      </figure>
     </div>
   </section>
 </main>
