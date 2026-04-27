@@ -1,7 +1,7 @@
 # Swami Vedanta Desikan Thirumaligai, Srirangam
 
 ## Project Goal
-Create a donor-facing custom HTML fragment for `www.parakalamatham.org` that highlights the historic and sampradaya importance of **Swami Vedanta Desikan Thirumaligai** at Srirangam, explains its connection to Parakala Matham, and supports ongoing and future fundraising for renovation, restoration, and related upkeep.
+Create a donor-facing custom HTML fragment for `www.parakalamatham.org` that highlights the historic and sampradaya importance of **Swami Vedantha Desikan Thirumaligai** at Srirangam, explains its connection to Parakala Matham, and supports ongoing and future fundraising for renovation, restoration, and related upkeep.
 
 This is **not** a full standalone website. It must be built as an embeddable WordPress HTML fragment for the page template **`Unboxed Content`**.
 
@@ -11,13 +11,15 @@ The page should primarily speak to:
 - sishyas, abhimanis, and well-wishers of Parakala Matham
 - potential donors who may contribute toward renovation, restoration, and long-term preservation
 
+The page tone should be **strongly fundraising-oriented**, while still giving heritage and sampradaya significance the seriousness it deserves.
+
 The page should not read like a generic renovation appeal alone. It should first establish:
 - the sanctity of the site
 - its historical and spiritual importance
 - its specific relevance to Parakala Matham
 - why preserving it matters now
 
-Only after that should it move into contribution and funding needs.
+Only after that should it move into contribution and funding needs, but the page should still be designed so that a motivated donor can decide and contribute without friction.
 
 ## Website Context
 - Site: `parakalamatham.org`
@@ -52,6 +54,11 @@ The following facts are sufficiently supported by currently available source mat
 - The grant request letter describes the building as an **aging 300+ year old** Thirumaligai in depleted condition with **water seepage**, aged plastered walls, floor issues, and terrace deterioration requiring urgent attention.
 - The grant request letter states an estimated project size of **around Rs. 25 lakhs**, with around **Rs. 5 lakhs** expected to be mobilized from one side and the balance hoped through donor / PLM / BSPSMS support.
 
+## Working Public Name
+Use the full public heading:
+
+- **Swami Vedantha Desikan Thirumaligai**
+
 ## Historically Useful But Still To Be Handled Carefully
 The following should be used with care, and only in a measured way unless confirmed again by project stakeholders:
 
@@ -59,13 +66,13 @@ The following should be used with care, and only in a measured way unless confir
 - The same post says this is the place from where he **left for Paramapadam**.
 - The same post says the structure preserved stone elements, wooden girders, and a **kUrmAsanam** associated with Swami Desikan traditions.
 
-These may be included in the draft, but if used they should be presented respectfully and conservatively unless the principals explicitly confirm the preferred wording.
+These may be included in the draft if supported by an authoritative source and should be presented respectfully and conservatively unless the principals explicitly confirm the preferred wording.
 
 ## Working Narrative Direction
 The page should be structured around this narrative:
 
 1. **Sanctity and legacy**
-   - explain why Swami Vedanta Desikan Thirumaligai matters
+   - explain why Swami Vedantha Desikan Thirumaligai matters
    - establish sampradaya significance
    - connect it to Parakala Matham
 
@@ -76,12 +83,15 @@ The page should be structured around this narrative:
 3. **Urgent preservation need**
    - show that the structure is old and vulnerable
    - use the available renovation / excavation / repair images carefully
+   - show that restoration work has already begun and therefore funds are immediately needed
    - describe the need for restoration in dignified language
 
 4. **Restoration and donor support**
    - explain why financial support is needed
-   - make room for future donation details, account details, and UPI / QR code
+   - allow an impulsive donor to contribute immediately from the page
+   - include account details, UPI / QR code, and related contribution instructions
    - allow for anchor links near the top that jump to contribution details lower on the page
+   - provide room for donor recognition, including current major / minor contributors
 
 ## Initial Page Sections
 The first working draft should likely include these blocks:
@@ -93,14 +103,15 @@ The first working draft should likely include these blocks:
 5. Current restoration need
 6. Renovation context with photo evidence
 7. Appeal to donors and preservation supporters
-8. Contribution details block
-9. Placeholder / editorial panel for facts still awaiting confirmation
+8. Contribution details block with immediate action path
+9. Donor recognition / support status block
+10. Placeholder / editorial panel for facts still awaiting confirmation
 
 ## Visual Direction
 - dignified, devotional, heritage-sensitive presentation
 - fit naturally into `parakalamatham.org`
 - should not feel like a glossy corporate fundraising site
-- should still feel compelling enough for donors
+- should feel urgent enough for donors
 - use colors that harmonize with the existing ParakalaMatham site header palette
 
 ## Asset Handling
@@ -113,6 +124,16 @@ This page is expected to eventually include:
 - contribution / donation account details
 - UPI / QR code
 - links or jump points from the top of the page to those details
+- current major donor listing
+- future minor / additional contributor listing
+
+The first working draft should be ready to show real contribution details, not only placeholders, wherever those details are already available.
+
+## Current Funding Framing
+- Publicly mention the project estimate.
+- Working note: the amount may need to be updated from **Rs. 25 lakhs** to **Rs. 27 lakhs** depending on confirmation.
+- Publicly mention that **PLM USA is in for Rs. 10 lakhs**.
+- Leave room for other contributors to be listed below as they arrive.
 
 Because that information may change over time, the contribution block should be designed so it can be updated without restructuring the entire page.
 
@@ -122,6 +143,8 @@ A project-specific Word document should be maintained and sent to the principals
 - preferred wording for the site's importance
 - exact renovation scope
 - whether the `300+ years` wording should be used publicly
+- whether Paramapadam wording should be used publicly
+- whether the working estimate should be `Rs. 25 lakhs` or `Rs. 27 lakhs`
 - contribution details
 - the names and designations of the people to mention publicly
 

@@ -16,6 +16,7 @@ Short phrases are fine. Kannada or Tamil notes are also fine. Final website Engl
 - Is it correct to say this was a blessed vaasasthanam of Swami Desikan:
 - Is it correct to say Swami Desikan stayed here for about 42 years:
 - Is it correct to say he attained Paramapadam from here:
+- If yes, what is the preferred authoritative wording for the Paramapadam statement:
 - Any wording that should NOT be used publicly:
 
 ## 3. Importance To Parakala Matham
@@ -49,10 +50,13 @@ Short phrases are fine. Kannada or Tamil notes are also fine. Final website Engl
 
 ## 7. Estimated Cost And Fundraising
 - Is the current estimate still about Rs. 25 lakhs:
+- Or should the public page use Rs. 27 lakhs instead:
 - How much has already been arranged:
 - How much still needs to be raised:
 - Should this amount be shown publicly:
 - Preferred wording for the donor appeal:
+- Is it approved to say PLM USA is contributing Rs. 10 lakhs:
+- Preferred wording for listing major and minor contributors:
 
 ## 8. Contribution Details
 - Account name:
@@ -66,6 +70,7 @@ Short phrases are fine. Kannada or Tamil notes are also fine. Final website Engl
 - Phone:
 - Email:
 - Which contribution details can be shown publicly:
+- Should the page encourage immediate / direct contributions on the same page:
 
 ## 9. People To Mention Publicly
 - Principal / local manager / trustee names to mention:
