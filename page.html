@@ -345,8 +345,8 @@ body:has(.desikan-page) .entry-header {
   }
 
   .desikan-support-grid {
-    grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
-    align-items: start;
+    grid-template-columns: 1fr;
+    align-items: stretch;
   }
 
   .desikan-photo-card figcaption {
@@ -396,6 +396,24 @@ body:has(.desikan-page) .entry-header {
 
   .desikan-donor-box p + p {
     margin-top: 12px;
+  }
+
+  .desikan-funding-meta {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
+    gap: 18px;
+    margin-top: 22px;
+  }
+
+  .desikan-funding-meta h3 {
+    margin-top: 0;
+  }
+
+  .desikan-funding-panel {
+    padding: 18px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.45);
+    border: 1px solid rgba(157, 95, 33, 0.14);
   }
 
   .desikan-pdf-link {
@@ -452,45 +470,114 @@ body:has(.desikan-page) .entry-header {
     font-family: Georgia, "Palatino Linotype", "Book Antiqua", serif;
     font-size: 1.28rem;
     color: var(--maroon-deep);
-    text-align: center;
   }
 
   .desikan-qr-card p {
     color: var(--muted);
   }
-  .desikan-qr-placeholder {
+
+  .desikan-donation-methods {
     display: grid;
-    place-items: center;
-    width: min(100%, 240px);
-    aspect-ratio: 1;
-    margin: 18px auto 16px;
-    border-radius: 24px;
-    background:
-      linear-gradient(45deg, #111 12.5%, transparent 12.5%, transparent 37.5%, #111 37.5%, #111 62.5%, transparent 62.5%, transparent 87.5%, #111 87.5%),
-      linear-gradient(45deg, #111 12.5%, #fff 12.5%, #fff 37.5%, #111 37.5%, #111 62.5%, #fff 62.5%, #fff 87.5%, #111 87.5%);
-    background-size: 30px 30px;
-    background-position: 0 0, 15px 15px;
-    border: 12px solid #fff;
-    box-shadow: inset 0 0 0 1px rgba(17, 17, 17, 0.08), 0 16px 32px rgba(68, 36, 16, 0.12);
+    gap: 14px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .desikan-qr-placeholder span {
+  .desikan-payment-card {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.64);
+    border: 1px solid rgba(157, 95, 33, 0.16);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  }
+
+  .desikan-payment-card h4 {
+    margin: 10px 0 8px;
+    font-family: Georgia, "Palatino Linotype", "Book Antiqua", serif;
+    font-size: 1.02rem;
+    color: var(--maroon-deep);
+  }
+
+  .desikan-method-label {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    min-width: 92px;
-    min-height: 92px;
-    padding: 10px;
-    border-radius: 18px;
-    background: rgba(255, 248, 236, 0.98);
-    color: var(--maroon-deep);
-    font-size: 0.84rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
+    padding: 5px 10px;
+    border-radius: 999px;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
+  }
+
+  .desikan-method-label-india {
+    background: rgba(198, 119, 32, 0.14);
+    color: #8a3e08;
+  }
+
+  .desikan-method-label-global {
+    background: rgba(125, 31, 59, 0.1);
+    color: var(--maroon-deep);
+  }
+
+  .desikan-account-details {
+    display: grid;
+    gap: 8px;
+    margin-top: 12px;
+    padding: 14px;
+    border-radius: 18px;
+    background: rgba(255, 250, 241, 0.92);
+    border: 1px solid rgba(157, 95, 33, 0.14);
+  }
+
+  .desikan-account-row {
+    display: grid;
+    grid-template-columns: minmax(96px, 0.42fr) 1fr;
+    gap: 10px;
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+
+  .desikan-account-row strong {
+    color: var(--maroon-deep);
+  }
+
+  .desikan-payment-note {
+    margin-top: 10px;
+    font-size: 0.9rem;
+  }
+
+  .desikan-qr-image {
+    display: block;
+    width: min(100%, 240px);
+    margin: 12px auto 10px;
+    padding: 12px;
+    border-radius: 18px;
+    background: #fff;
+    border: 1px solid rgba(17, 17, 17, 0.08);
+    box-shadow: 0 12px 24px rgba(68, 36, 16, 0.12);
+    object-fit: contain;
+  }
+
+  .desikan-payment-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: auto;
+    padding: 12px 14px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--maroon-deep), var(--maroon));
+    color: #fff !important;
+    font-weight: 800;
     text-align: center;
-    line-height: 1.35;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 22px rgba(90, 17, 41, 0.18);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+
+  .desikan-payment-cta:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 26px rgba(90, 17, 41, 0.24);
   }
 
   @media (max-width: 1080px) {
@@ -503,6 +590,14 @@ body:has(.desikan-page) .entry-header {
     
     .desikan-support-grid {
       gap: 24px;
+    }
+
+    .desikan-donation-methods {
+      grid-template-columns: 1fr;
+    }
+
+    .desikan-funding-meta {
+      grid-template-columns: 1fr;
     }
   }
 
@@ -528,6 +623,11 @@ body:has(.desikan-page) .entry-header {
     .desikan-pdf-link {
       margin-top: 4px;
       margin-left: 0;
+    }
+
+    .desikan-account-row {
+      grid-template-columns: 1fr;
+      gap: 2px;
     }
   }
 
@@ -730,30 +830,63 @@ body:has(.desikan-page) .entry-header {
         <p class="desikan-highlight">
           Your contributions, however small or big, will go to a very important preservation cause of our priceless sampradayam.
         </p>
-        <h3 style="margin-top: 18px;">List of donors</h3>
-        <ul class="desikan-list" style="margin-top: 10px;">
-          <li>PLM USA: Rs. 10 lakhs</li>
-          <li class="desikan-donor-placeholder">[ Your Name Here ]</li>
-        </ul>
-        <h3 style="margin-top: 22px;">Contacts</h3>
-        <ul class="desikan-list" style="margin-top: 10px;">
-          <li><b>Sri T.N.C.Venkatesan, Chennai: +91 98840 64245</b></li>
-          <li>Manager: Sri Govidarajan, Srirangam</li>
-          <li>Sri R. Achutharaman, Bangalore: +91 96860 24598</li>
-          <li>Sri N. Ananthanarayana, Chennai: +91 94440 30895</li>
-        </ul>
+        <div class="desikan-funding-meta">
+          <div class="desikan-funding-panel">
+            <h3>Contacts</h3>
+            <ul class="desikan-list" style="margin-top: 10px;">
+              <li><b>Sri T.N.C.Venkatesan, Chennai: +91 98840 64245</b></li>
+              <li>Manager: Sri Govidarajan, Srirangam</li>
+              <li>Sri R. Achutharaman, Bangalore: +91 96860 24598</li>
+              <li>Sri N. Ananthanarayana, Chennai: +91 94440 30895</li>
+            </ul>
+          </div>
+          <div class="desikan-funding-panel">
+            <h3>List of donors</h3>
+            <ul class="desikan-list" style="margin-top: 10px;">
+              <li>PLM USA: Rs. 10 lakhs</li>
+              <li class="desikan-donor-placeholder">[ Your Name Here ]</li>
+            </ul>
+          </div>
+        </div>
       </div>
       <div class="desikan-qr-card">
-        <h3>Donation QR Code Placeholder</h3>
-        <p>
-          Replace this panel with the actual donation QR code and UPI details when the final payment instructions are approved for publication.
-        </p>
-        <div class="desikan-qr-placeholder" aria-label="Dummy QR placeholder">
-          <span>Dummy QR</span>
+        <h3>Ways to contribute</h3>
+        <div class="desikan-donation-methods">
+          <div class="desikan-payment-card">
+            <span class="desikan-method-label desikan-method-label-india">India residents only</span>
+            <h4>Bank transfer / Google Pay bank transfer</h4>
+            <p>
+              Donors in India may transfer directly using the account and IFSC details below. In Google Pay, PhonePe, Paytm, or similar apps, choose bank transfer and enter the account number and IFSC.
+            </p>
+            <div class="desikan-account-details">
+              <div class="desikan-account-row"><strong>Account name</strong><span>Brahmatantra Swatantra Parakala Swamy Mutt Seva Trust</span></div>
+              <div class="desikan-account-row"><strong>Bank</strong><span>Karnataka Bank Ltd.</span></div>
+              <div class="desikan-account-row"><strong>Branch</strong><span>Subhashnagar, Bangalore - 560023</span></div>
+              <div class="desikan-account-row"><strong>Account no.</strong><span>0892500104309101</span></div>
+              <div class="desikan-account-row"><strong>IFSC</strong><span>KARB0000089</span></div>
+            </div>
+          </div>
+
+          <div class="desikan-payment-card">
+            <span class="desikan-method-label desikan-method-label-global">US / International</span>
+            <h4>PLM USA general donation PayPal QR</h4>
+            <p>
+              Donors outside India may scan this QR code for PLM USA donations. Specify Srirangam renovation project.
+            </p>
+            <img class="desikan-qr-image" src="https://www.parakalamatham.org/wp-content/uploads/plm-usa-general-donation-paypal-qr.jpg" alt="PayPal QR code for PLM USA general donations">
+          </div>
+
+          <div class="desikan-payment-card">
+            <span class="desikan-method-label desikan-method-label-global">US / International</span>
+            <h4>Credit card or PayPal through PLM USA</h4>
+            <p>
+              For credit card, debit card, or PayPal contributions in USD, use the Parakala Matham contribution page for PLM USA.
+            </p>
+            <a href="https://www.parakalamatham.org/pay-plm-by-credit-card/" target="_blank" rel="noopener noreferrer" class="desikan-payment-cta">
+              Contribute by Credit Card / PayPal
+            </a>
+          </div>
         </div>
-        <p>
-          The layout already reserves space for direct-scan giving so a motivated donor can respond immediately.
-        </p>
       </div>
     </div>
 
