@@ -89,16 +89,33 @@ body:has(.desikan-page) .entry-header {
     text-transform: uppercase;
   }
 
+  .desikan-hero-copy {
+    display: grid;
+    gap: 14px;
+    align-content: center;
+  }
+
   .desikan-title {
-    margin: 0 0 14px;
+    display: block;
+    margin: 0;
     font-family: Georgia, "Palatino Linotype", "Book Antiqua", serif;
-    font-size: clamp(2.25rem, 4.1vw, 4rem);
-    line-height: 1.04;
+    font-size: clamp(1.9rem, 3.2vw, 3.15rem);
+    line-height: 1.18;
+  }
+
+  .desikan-hero-subheading {
+    display: block;
+    margin: 0;
+    color: rgba(255, 241, 217, 0.95);
+    font-family: Georgia, "Palatino Linotype", "Book Antiqua", serif;
+    font-size: clamp(1.12rem, 1.65vw, 1.55rem);
+    font-weight: 600;
+    line-height: 1.32;
   }
 
   .desikan-subtitle {
     max-width: 62ch;
-    margin-bottom: 22px;
+    margin: 0 0 8px;
     color: rgba(255, 245, 231, 0.94);
     font-size: 1.05rem;
   }
@@ -316,6 +333,45 @@ body:has(.desikan-page) .entry-header {
     background: transparent;
     border: 1px dashed var(--saffron);
     box-sizing: border-box;
+  }
+
+  .desikan-donor-list {
+    gap: 14px;
+  }
+
+  .desikan-donor-entry {
+    padding-left: 18px !important;
+  }
+
+  .desikan-donor-name,
+  .desikan-donor-affiliation,
+  .desikan-donor-amount {
+    display: block;
+  }
+
+  .desikan-donor-name {
+    color: var(--ink);
+    font-weight: 800;
+    line-height: 1.42;
+    overflow-wrap: break-word;
+  }
+
+  .desikan-donor-affiliation,
+  .desikan-donor-amount {
+    padding-left: 12px;
+  }
+
+  .desikan-donor-affiliation {
+    margin-top: 3px;
+    color: var(--muted);
+    font-size: 0.92rem;
+    line-height: 1.35;
+  }
+
+  .desikan-donor-amount {
+    margin-top: 5px;
+    color: var(--maroon-deep);
+    font-weight: 800;
   }
   .desikan-callout {
     padding: 22px;
@@ -645,9 +701,10 @@ body:has(.desikan-page) .entry-header {
 <main class="desikan-page">
   <section class="desikan-shell">
     <div class="desikan-hero">
-      <div>
+      <div class="desikan-hero-copy">
         <div class="desikan-eyebrow">Srirangam Preservation Appeal</div>
-        <h1 class="desikan-title">Srimad Vedanta Desikan Thirumaligai</h1>
+        <h1 class="desikan-title">Parakala Matham, Srirangam</h1>
+        <h2 class="desikan-hero-subheading">Srimad Vedanta Desikan Thirumaligai</h2>
         <p class="desikan-subtitle">
           At Srirangam stands a sacred Thirumaligai revered in the sampradaya as a blessed vaasasthanam associated with Srimad Vedanta Desikan. This is not only a place of memory, but a living religious space linked to Parakala Matham, where worship, observances, and traditional learning continue even as the structure now calls for urgent preservation.
         </p>
@@ -712,6 +769,7 @@ body:has(.desikan-page) .entry-header {
         <li>Preservation of the site is directly connected with Parakala Matham's continuing involvement.</li>
       </ul>
     </div>
+
     <div class="desikan-gallery">
       <figure class="desikan-photo-card">
         <img src="https://www.parakalamatham.org/wp-content/uploads/acharyan-visit-srirangam-mutt-2019.jpg" alt="Acharyan visit at Srirangam Mutt">
@@ -732,6 +790,27 @@ body:has(.desikan-page) .entry-header {
         <figcaption>
           <strong>Traditional interior character</strong>
           <span>Older architectural elements such as the wooden staircase are part of the character that should be protected.</span>
+        </figcaption>
+      </figure>
+      <figure class="desikan-photo-card">
+        <img src="https://www.parakalamatham.org/wp-content/uploads/sri-madhurakavi-azhwar-thirunakshathra-vaibhavam-srirangam-mutt-1.jpeg" alt="Sri Madhurakavi Azhwar Thirunakshathra Vaibhavam at the Srirangam Mutt">
+        <figcaption>
+          <strong>Sri Madhurakavi Azhwar Thirunakshathra Vaibhavam</strong>
+          <span>Photos from the observance at the Srirangam Mutt.</span>
+        </figcaption>
+      </figure>
+      <figure class="desikan-photo-card">
+        <img src="https://www.parakalamatham.org/wp-content/uploads/sri-madhurakavi-azhwar-thirunakshathra-vaibhavam-srirangam-mutt-2.jpeg" alt="Sri Madhurakavi Azhwar Thirunakshathra Vaibhavam observance at the Mutt">
+        <figcaption>
+          <strong>Traditional observance at the Mutt</strong>
+          <span>The occasion reflects the continuing worship and sampradaya life of the premises.</span>
+        </figcaption>
+      </figure>
+      <figure class="desikan-photo-card">
+        <img src="https://www.parakalamatham.org/wp-content/uploads/sri-madhurakavi-azhwar-thirunakshathra-vaibhavam-srirangam-mutt-3.jpeg" alt="Sri Madhurakavi Azhwar Thirunakshathra Vaibhavam gathering at the Srirangam Mutt">
+        <figcaption>
+          <strong>Vaibhavam at the Srirangam Mutt</strong>
+          <span>A glimpse of the devotional observance connected with Parakala Matham involvement.</span>
         </figcaption>
       </figure>
     </div>
@@ -842,8 +921,12 @@ body:has(.desikan-page) .entry-header {
           </div>
           <div class="desikan-funding-panel">
             <h3>List of donors</h3>
-            <ul class="desikan-list" style="margin-top: 10px;">
-              <li>PLM USA: Rs. 10 lakhs</li>
+            <ul class="desikan-list desikan-donor-list" style="margin-top: 10px;">
+              <li class="desikan-donor-entry">
+                <span class="desikan-donor-name">HH Srimad Abhinava Vageesha Brahmatantra Swatantra Parakala Mahdeshikan</span>
+                <span class="desikan-donor-affiliation">(PLM USA Shishyas and Abhimanis)</span>
+                <span class="desikan-donor-amount">Rs. 10 lakhs</span>
+              </li>
               <li class="desikan-donor-placeholder">[ Your Name Here ]</li>
             </ul>
           </div>
