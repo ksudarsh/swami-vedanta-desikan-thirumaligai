@@ -1,3 +1,5 @@
+> **Archived 2026-10-16.** This project now lives in the Parakalamatham website repository (`ksudarsh/Parakalamatham_Website`) at `pages/swami-vedantha-desikan-thirumaligai/`, with its full history. This repository is kept read-only for reference.
+
 # Srimad Vedanta Desikan Thirumaligai, Srirangam
 
 This repository contains the working material for a donor-facing custom HTML page for `parakalamatham.org`.
